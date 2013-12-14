@@ -10,10 +10,13 @@ class GameOfLife():
 
 		for key in self.grid:
 
-			count = self.countOfNeighborsAlive(key[0], key[1])
+			possibleNeighbors = self.getPossibleNeighbors(key[0], key[1])
 
-			if count == 3:
-				tmpGrid[key] = True
+			for neighborKey in possibleNeighbors:
+				count = self.countOfNeighborsAlive(neighborKey[0], neighborKey[1])
+				
+				if count == 3:
+					tmpGrid[key] = True
 
 		self.grid.clear()
 
