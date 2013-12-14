@@ -47,6 +47,18 @@ class GameOfLifeTesting(unittest.TestCase):
 	 	neighborTuples = obj.getPossibleNeighbors(0, 0)
 
 	 	self.assertTrue(len(neighborTuples) == 9)
+
+	 def test_countOfNeighborsAlive(self):
+	 	grid = {}
+	 	obj = gameOfLife.GameOfLife(grid)
+
+	 	obj.addPoint(0, 0)
+	 	obj.addPoint(1, 0)
+	 	obj.addPoint(0, 1)
+
+	 	aliveNeighbors = obj.countOfNeighborsAlive(0, 0)
+
+	 	self.assertTrue(aliveNeighbors == 2)
 	 		
 
 
