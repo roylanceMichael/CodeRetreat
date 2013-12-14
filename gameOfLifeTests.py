@@ -37,7 +37,7 @@ class GameOfLifeTesting(unittest.TestCase):
 	 	self.assertTrue(len(grid) == 4)	
 
 	 	obj.evolve()
-
+	 	
 		self.assertTrue(len(grid) == 4)	 	
 
 	 def test_getPossibleNeighbors(self):
@@ -59,7 +59,6 @@ class GameOfLifeTesting(unittest.TestCase):
 	 	aliveNeighbors = obj.countOfNeighborsAlive(0, 0)
 
 	 	self.assertTrue(aliveNeighbors == 2)
-	 		
 
 
 def main():

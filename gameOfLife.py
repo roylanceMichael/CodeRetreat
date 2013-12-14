@@ -6,7 +6,20 @@ class GameOfLife():
 		self.grid[(x, y)] = True
 
 	def evolve(self):
-		print ''
+		tmpGrid = {}
+
+		for key in self.grid:
+
+			count = self.countOfNeighborsAlive(key[0], key[1])
+
+			if count == 3:
+				tmpGrid[key] = True
+
+		self.grid.clear()
+
+		for key in tmpGrid:
+			self.grid[key] = True
+
 
 	def getPossibleNeighbors(self, x, y):
 		neighbors = []
