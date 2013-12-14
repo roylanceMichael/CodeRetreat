@@ -17,6 +17,14 @@ class GameOfLifeTesting(unittest.TestCase):
 
 	 	self.assertTrue(len(grid) == 1)
 
+	 def test_evolveFromOnePoint(self):
+	 	grid = {}
+	 	obj = gameOfLife.GameOfLife(grid)
+
+	 	obj.evolve()
+
+		self.assertTrue(len(grid) == 0)	 	
+
 
 def main():
     unittest.main()
