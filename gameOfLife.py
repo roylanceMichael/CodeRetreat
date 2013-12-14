@@ -7,3 +7,11 @@ class GameOfLife():
 
 	def evolve(self):
 		print ''
+
+	def getNeighbors(self, x, y):
+		neighbors = []
+
+		if not self.grid.has_key((x, y)):
+			return neighbors
+
+		return neighbors

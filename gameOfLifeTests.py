@@ -25,7 +25,7 @@ class GameOfLifeTesting(unittest.TestCase):
 
 		self.assertTrue(len(grid) == 0)	 
 	
-	 def test_evolveFromOnePoint(self):
+	 def test_evolveFromFourPoints(self):
 	 	grid = {}
 	 	obj = gameOfLife.GameOfLife(grid)
 
@@ -39,6 +39,19 @@ class GameOfLifeTesting(unittest.TestCase):
 	 	obj.evolve()
 
 		self.assertTrue(len(grid) == 4)	 	
+
+	 def test_getNeighbors(self):
+		grid = {}
+	 	obj = gameOfLife.GameOfLife(grid)
+
+	 	obj.addPoint(0, 0)
+	 	obj.addPoint(1, 0)
+	 	obj.addPoint(0, 1)
+
+	 	neighborTuples = obj.getNeighbors(5, 0)
+
+	 	self.assertTrue(len(neighborTuples) == 0)
+	 		
 
 
 def main():
