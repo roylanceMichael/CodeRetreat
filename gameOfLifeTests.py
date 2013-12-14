@@ -2,7 +2,10 @@ import unittest
 import gameOfLife
 
 class GameOfLifeTesting(unittest.TestCase):
-	 def test_somethingsomething(self):
+	 def test_objectExists(self):
+	 	obj = gameOfLife.GameOfLife({})
+
+	 	self.assertTrue(obj != None)
 
 
 def main():
