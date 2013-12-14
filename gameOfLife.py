@@ -8,10 +8,11 @@ class GameOfLife():
 	def evolve(self):
 		print ''
 
-	def getNeighbors(self, x, y):
+	def getPossibleNeighbors(self, x, y):
 		neighbors = []
 
-		if not self.grid.has_key((x, y)):
-			return neighbors
+		for deltaX in range(-1, 2):
+			for deltaY in range(-1, 2):
+				neighbors.append((x + deltaX, y + deltaY))
 
 		return neighbors
