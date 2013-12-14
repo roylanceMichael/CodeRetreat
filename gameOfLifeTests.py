@@ -7,6 +7,16 @@ class GameOfLifeTesting(unittest.TestCase):
 
 	 	self.assertTrue(obj != None)
 
+	 def test_addPointToGame(self):
+	 	grid = {}
+	 	obj = gameOfLife.GameOfLife(grid)
+
+	 	self.assertTrue(len(grid) == 0)
+
+	 	obj.addPoint(0, 0)
+
+	 	self.assertTrue(len(grid) == 1)
+
 
 def main():
     unittest.main()
