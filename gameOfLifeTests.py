@@ -23,7 +23,22 @@ class GameOfLifeTesting(unittest.TestCase):
 
 	 	obj.evolve()
 
-		self.assertTrue(len(grid) == 0)	 	
+		self.assertTrue(len(grid) == 0)	 
+	
+	 def test_evolveFromOnePoint(self):
+	 	grid = {}
+	 	obj = gameOfLife.GameOfLife(grid)
+
+	 	obj.addPoint(0, 0)
+	 	obj.addPoint(1, 0)
+	 	obj.addPoint(0, 1)
+	 	obj.addPoint(1, 1)
+
+	 	self.assertTrue(len(grid) == 4)	
+
+	 	obj.evolve()
+
+		self.assertTrue(len(grid) == 4)	 	
 
 
 def main():
